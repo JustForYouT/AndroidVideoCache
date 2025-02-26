@@ -1,12 +1,15 @@
 package com.danikula.videocache.sample;
 
+import static org.androidannotations.annotations.EBean.Scope.Fragment;
+
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.VideoView;
+
+import androidx.fragment.app.Fragment;
 
 import com.danikula.videocache.CacheListener;
 import com.danikula.videocache.HttpProxyCacheServer;
@@ -20,7 +23,7 @@ import org.androidannotations.annotations.ViewById;
 import java.io.File;
 
 @EFragment(R.layout.fragment_video)
-public class VideoFragment extends Fragment implements CacheListener {
+public class VideoFragment extends androidx.fragment.app.Fragment implements CacheListener {
 
     private static final String LOG_TAG = "VideoFragment";
 
